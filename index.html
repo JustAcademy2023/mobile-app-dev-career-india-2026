@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mobile App Development Career Opportunities in India 2026 | JustAcademy</title>
+<meta name="description" content="Flutter, Android, iOS and React Native training tracks for the 2026 Indian mobile job market — courses, career roadmap, and reading list from JustAcademy, Pune." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0F1130;
+    --bg-soft:#161A45;
+    --surface:#1C2158;
+    --surface-line:#2C3170;
+    --text:#F4F3FF;
+    --text-muted:#A6A3CE;
+    --amber:#FFB443;
+    --amber-deep:#3A2A0C;
+    --mint:#5EEAD4;
+    --mint-deep:#0B2E29;
+    --flutter:#54C5F8;
+    --android:#8BD450;
+    --ios:#E8E6F3;
+    --rn:#61DBFB;
+    --radius-lg:26px;
+    --radius-sm:14px;
+    --maxw:1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    line-height:1.15;
+    margin:0;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  ::selection{background:var(--amber);color:#241704;}
+
+  /* progress bar - the "install progress" as you scroll */
+  #progress{
+    position:fixed;top:0;left:0;height:3px;width:0%;
+    background:linear-gradient(90deg,var(--mint),var(--amber));
+    z-index:999;
+    transition:width .08s linear;
+  }
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:90;
+    background:rgba(15,17,48,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;max-width:var(--maxw);margin:0 auto;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:19px;letter-spacing:.2px;}
+  .logo-mark{
+    width:34px;height:34px;border-radius:10px;
+    background:linear-gradient(160deg,var(--amber),var(--mint));
+    display:flex;align-items:center;justify-content:center;
+    color:#161A45;font-weight:700;font-size:15px;
+  }
+  .nav-links{display:flex;gap:32px;font-size:15px;color:var(--text-muted);}
+  .nav-links a:hover{color:var(--text);}
+  .nav-cta{
+    background:var(--amber);color:#241704;padding:10px 20px;border-radius:100px;
+    font-weight:600;font-size:14px;white-space:nowrap;
+  }
+  .nav-cta:hover{filter:brightness(1.08);}
+  .menu-btn{display:none;background:none;border:none;color:var(--text);font-size:26px;cursor:pointer;}
+
+  /* hero */
+  .hero{padding:88px 0 60px;position:relative;overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;}
+  .eyebrow-line{
+    display:flex;align-items:center;gap:10px;color:var(--mint);font-size:14px;font-weight:500;margin-bottom:22px;
+  }
+  .eyebrow-line span.dot{width:7px;height:7px;border-radius:50%;background:var(--mint);display:inline-block;}
+  .hero h1{font-size:clamp(34px,4.4vw,54px);color:var(--text);}
+  .hero h1 .accent{color:var(--amber);}
+  .hero p.lead{margin-top:22px;font-size:18px;color:var(--text-muted);max-width:52ch;}
+  .hero-actions{display:flex;gap:16px;margin-top:34px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--amber);color:#241704;padding:15px 26px;border-radius:100px;font-weight:600;font-size:15px;
+  }
+  .btn-primary:hover{filter:brightness(1.08);}
+  .btn-ghost{
+    border:1px solid var(--surface-line);padding:14px 24px;border-radius:100px;font-weight:600;font-size:15px;color:var(--text);
+  }
+  .btn-ghost:hover{border-color:var(--mint);color:var(--mint);}
+
+  /* phone illustration */
+  .phone-stage{position:relative;height:440px;display:flex;align-items:center;justify-content:center;}
+  .phone{
+    width:210px;height:420px;border-radius:36px;
+    background:linear-gradient(180deg,#232967,#161A45);
+    border:2px solid var(--surface-line);
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+    position:relative;padding:16px;
+  }
+  .phone::before{
+    content:'';position:absolute;top:14px;left:50%;transform:translateX(-50%);
+    width:56px;height:6px;border-radius:10px;background:rgba(255,255,255,.15);
+  }
+  .phone-screen{margin-top:22px;display:flex;flex-direction:column;gap:10px;}
+  .phone-row{height:34px;border-radius:10px;background:rgba(255,255,255,.06);}
+  .phone-row.wide{height:74px;background:linear-gradient(135deg,rgba(94,234,212,.18),rgba(255,180,67,.14));}
+  .badge{
+    position:absolute;padding:9px 14px;border-radius:100px;font-size:13px;font-weight:600;
+    display:flex;align-items:center;gap:7px;box-shadow:0 12px 24px -8px rgba(0,0,0,.5);
+    animation:float 6s ease-in-out infinite;
+  }
+  .badge .swatch{width:9px;height:9px;border-radius:50%;}
+  .badge-flutter{top:6%;left:-8%;background:#0E2B3A;color:var(--flutter);animation-delay:0s;}
+  .badge-android{top:32%;right:-14%;background:#12300F;color:var(--android);animation-delay:1.2s;}
+  .badge-ios{bottom:26%;left:-16%;background:#26283E;color:var(--ios);animation-delay:2.4s;}
+  .badge-rn{bottom:4%;right:-8%;background:#0E2C36;color:var(--rn);animation-delay:3.6s;}
+  @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
+  /* stat strip */
+  .stat-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:34px 0;}
+  .stat-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .stat{flex:1;min-width:200px;padding:0 20px;border-left:1px solid rgba(255,255,255,.08);}
+  .stat:first-child{border-left:none;padding-left:0;}
+  .stat .num{font-family:'Space Grotesk';font-size:30px;font-weight:600;color:var(--mint);}
+  .stat .label{font-size:14px;color:var(--text-muted);margin-top:6px;max-width:26ch;}
+
+  /* sections generic */
+  section{padding:96px 0;}
+  .section-head{max-width:640px;margin-bottom:52px;}
+  .section-head h2{font-size:clamp(26px,3.2vw,38px);}
+  .section-head p{color:var(--text-muted);font-size:16px;margin-top:14px;}
+
+  /* course cards */
+  .course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+  .course-card{
+    background:var(--surface);border:1px solid rgba(255,255,255,.06);
+    padding:30px 26px;border-radius:var(--radius-lg);
+    display:flex;flex-direction:column;gap:16px;
+    transition:transform .25s ease, border-color .25s ease;
+  }
+  .course-card:hover{transform:translateY(-6px);border-color:var(--surface-line);}
+  .icon-badge{
+    width:52px;height:52px;border-radius:16px 16px 16px 4px;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-family:'Space Grotesk';font-size:17px;
+  }
+  .icon-badge.flutter{background:rgba(84,197,248,.14);color:var(--flutter);}
+  .icon-badge.android{background:rgba(139,212,80,.14);color:var(--android);}
+  .icon-badge.ios{background:rgba(232,230,243,.14);color:var(--ios);}
+  .icon-badge.rn{background:rgba(97,219,251,.14);color:var(--rn);}
+  .course-card h3{font-size:20px;}
+  .course-card .tagline{font-size:13.5px;color:var(--amber);font-weight:600;}
+  .course-card p{color:var(--text-muted);font-size:14.5px;margin:0;}
+  .course-link{
+    margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--text);
+    padding-top:10px;border-top:1px solid rgba(255,255,255,.08);
+  }
+  .course-link svg{transition:transform .2s ease;}
+  .course-card:hover .course-link svg{transform:translate(3px,-3px);}
+
+  /* roadmap */
+  .roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative;}
+  .roadmap::before{
+    content:'';position:absolute;top:26px;left:12%;right:12%;height:1px;
+    background:repeating-linear-gradient(90deg,var(--surface-line) 0 10px, transparent 10px 20px);
+    display:block;
+  }
+  .road-step{position:relative;background:transparent;}
+  .road-step .num{
+    width:52px;height:52px;border-radius:50%;background:var(--bg-soft);border:1px solid var(--surface-line);
+    display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:600;color:var(--mint);
+    position:relative;z-index:2;margin-bottom:20px;
+  }
+  .road-step h3{font-size:19px;margin-bottom:10px;}
+  .road-step p{color:var(--text-muted);font-size:14.5px;}
+
+  /* blog list */
+  .blog-list{display:flex;flex-direction:column;}
+  .blog-row{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    padding:26px 4px;border-bottom:1px solid rgba(255,255,255,.08);
+    transition:padding-left .2s ease, border-color .2s ease;
+  }
+  .blog-row:first-child{border-top:1px solid rgba(255,255,255,.08);}
+  .blog-row:hover{padding-left:14px;border-color:var(--mint);}
+  .blog-row .b-left{display:flex;flex-direction:column;gap:6px;}
+  .blog-row .kicker{font-size:12.5px;color:var(--amber);font-weight:600;}
+  .blog-row h3{font-size:18px;font-weight:500;max-width:56ch;}
+  .blog-row .arrow{
+    width:38px;height:38px;border-radius:50%;border:1px solid var(--surface-line);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .blog-row:hover .arrow{border-color:var(--mint);color:var(--mint);}
+
+  /* cta band */
+  .cta-band{
+    background:linear-gradient(120deg,var(--mint-deep),var(--amber-deep));
+    border-radius:32px;padding:64px 48px;text-align:center;
+  }
+  .cta-band h2{font-size:clamp(26px,3.6vw,40px);max-width:22ch;margin:0 auto;}
+  .cta-band p{color:var(--text-muted);margin-top:16px;font-size:16px;}
+  .cta-band .btn-primary{margin-top:28px;display:inline-block;}
+
+  /* footer as bottom tab bar theme */
+  footer{border-top:1px solid rgba(255,255,255,.08);padding:64px 0 32px;}
+  .foot-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+  .foot-brand p{color:var(--text-muted);font-size:14.5px;margin-top:14px;max-width:34ch;}
+  .foot-col h4{font-size:13px;text-transform:none;color:var(--text);margin-bottom:16px;font-weight:600;}
+  .foot-col a{display:block;color:var(--text-muted);font-size:14.5px;margin-bottom:12px;}
+  .foot-col a:hover{color:var(--mint);}
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    padding-top:26px;border-top:1px solid rgba(255,255,255,.08);font-size:13.5px;color:var(--text-muted);
+  }
+  .tab-pill{
+    display:inline-flex;gap:6px;align-items:center;background:var(--surface);border:1px solid var(--surface-line);
+    padding:6px 6px;border-radius:100px;
+  }
+  .tab-pill a{margin:0;padding:8px 16px;border-radius:100px;color:var(--text-muted);font-size:13.5px;font-weight:600;}
+  .tab-pill a.active,.tab-pill a:hover{background:var(--bg);color:var(--mint);}
+
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .phone-stage{order:-1;height:340px;}
+    .nav-links{display:none;}
+    .menu-btn{display:block;}
+    .roadmap{grid-template-columns:1fr;}
+    .roadmap::before{display:none;}
+    .foot-top{grid-template-columns:1fr;}
+    .stat{border-left:none;padding-left:0;}
+    .blog-row h3{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo"><span class="logo-mark">JA</span>JustAcademy</a>
+    <div class="nav-links">
+      <a href="#tracks">Courses</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#reading">Blog</a>
+    </div>
+    <a class="nav-cta" href="#tracks">Browse courses</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow-line"><span class="dot"></span>Mobile app development in India, 2026</div>
+        <h1>India's phones need<br>someone to build<br>what's <span class="accent">on</span> them.</h1>
+        <p class="lead">Every unlocked screen in the country runs on code somebody had to write. In 2026 that work is split across four stacks — Flutter, Android, iOS, and React Native — and Indian companies are hiring for all four at once.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#tracks">See the four tracks</a>
+          <a class="btn-ghost" href="https://www.justacademy.co/blog-detail/mobile-app-development-career-opportunities-in-india-2026" target="_blank" rel="noopener">Read the 2026 outlook</a>
+        </div>
+      </div>
+      <div class="phone-stage">
+        <span class="badge badge-flutter"><span class="swatch" style="background:var(--flutter)"></span>Flutter</span>
+        <span class="badge badge-android"><span class="swatch" style="background:var(--android)"></span>Android</span>
+        <span class="badge badge-ios"><span class="swatch" style="background:var(--ios)"></span>iOS</span>
+        <span class="badge badge-rn"><span class="swatch" style="background:var(--rn)"></span>React Native</span>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-row wide"></div>
+            <div class="phone-row"></div>
+            <div class="phone-row"></div>
+            <div class="phone-row" style="width:60%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stat-strip">
+    <div class="wrap stat-row">
+      <div class="stat">
+        <div class="num">2026</div>
+        <div class="label">The year mobile-first hiring outpaces web-first hiring across Indian tech teams.</div>
+      </div>
+      <div class="stat">
+        <div class="num">4</div>
+        <div class="label">In-demand stacks to choose from — Flutter, Android, iOS, React Native.</div>
+      </div>
+      <div class="stat">
+        <div class="num">Tier 1–3</div>
+        <div class="label">Cities where mobile teams are now hiring, not just Bengaluru and Pune.</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="tracks">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Pick your stack</h2>
+        <p>Four tracks, four kinds of mobile developer. Project-led training out of Pune, aimed at 2026 hiring — not just certificates.</p>
+      </div>
+      <div class="course-grid">
+
+        <a class="course-card" href="https://www.justacademy.co/course-detail/pune/flutter-training-in-pune" target="_blank" rel="noopener">
+          <div class="icon-badge flutter">Fl</div>
+          <div>
+            <div class="tagline">One codebase, every screen</div>
+            <h3>Flutter development</h3>
+          </div>
+          <p>Build for Android and iOS from a single codebase with Google's UI toolkit — the fastest route Indian startups take to ship cross-platform apps.</p>
+          <span class="course-link">View course details
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </span>
+        </a>
+
+        <a class="course-card" href="https://www.justacademy.co/course-detail/pune/android-app-development-in-pune" target="_blank" rel="noopener">
+          <div class="icon-badge android">An</div>
+          <div>
+            <div class="tagline">Still the default phone in India</div>
+            <h3>Android development</h3>
+          </div>
+          <p>Android runs on the overwhelming majority of Indian phones. Learn to build native apps for the country's biggest install base, in Kotlin and Java.</p>
+          <span class="course-link">View course details
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </span>
+        </a>
+
+        <a class="course-card" href="https://www.justacademy.co/course-detail/pune/ios-training-in-pune" target="_blank" rel="noopener">
+          <div class="icon-badge ios">iOS</div>
+          <div>
+            <div class="tagline">Build for the other half of the market</div>
+            <h3>iOS development</h3>
+          </div>
+          <p>Swift and Xcode, for developers aiming at premium consumer apps, enterprise clients, and product companies that ship iOS first.</p>
+          <span class="course-link">View course details
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </span>
+        </a>
+
+        <a class="course-card" href="https://www.justacademy.co/course-detail/pune/react-native-training-in-pune" target="_blank" rel="noopener">
+          <div class="icon-badge rn">RN</div>
+          <div>
+            <div class="tagline">JavaScript, but for phones</div>
+            <h3>React Native development</h3>
+          </div>
+          <p>Already comfortable with web development? React Native turns that skill into native mobile apps without starting your career over.</p>
+          <span class="course-link">View course details
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Three steps from student to shipped</h2>
+        <p>The order matters more than the pace. Most delays in a mobile career happen when a step gets skipped, not when it takes longer than expected.</p>
+      </div>
+      <div class="roadmap">
+        <div class="road-step">
+          <div class="num">01</div>
+          <h3>Learn one stack properly</h3>
+          <p>Pick a single track — Flutter, Android, iOS, or React Native — and build real, working apps with it, not just slides and syntax.</p>
+        </div>
+        <div class="road-step">
+          <div class="num">02</div>
+          <h3>Build a portfolio that survives an interview</h3>
+          <p>Three shipped apps with real logic beat ten certificates. Interviewers ask what broke and how you fixed it — have an answer ready.</p>
+        </div>
+        <div class="road-step">
+          <div class="num">03</div>
+          <h3>Get hired</h3>
+          <p>Mobile teams in Pune, Bengaluru, and remote-first Indian startups are actively hiring against their 2026 product roadmaps right now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reading">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Worth reading before you pick a track</h2>
+        <p>Three short reads on where the mobile job market is heading and what each stack actually expects from you.</p>
+      </div>
+      <div class="blog-list">
+
+        <a class="blog-row" href="https://www.justacademy.co/blog-detail/mobile-app-development-career-opportunities-in-india-2026" target="_blank" rel="noopener">
+          <div class="b-left">
+            <span class="kicker">Industry outlook</span>
+            <h3>Mobile app development career opportunities in India, 2026</h3>
+          </div>
+          <span class="arrow">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </span>
+        </a>
+
+        <a class="blog-row" href="https://www.justacademy.co/blog-detail/ios-developer-roadmap-2026-learn-swift-xcode-app-development" target="_blank" rel="noopener">
+          <div class="b-left">
+            <span class="kicker">iOS track</span>
+            <h3>iOS developer roadmap 2026: learn Swift, Xcode, app development</h3>
+          </div>
+          <span class="arrow">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </span>
+        </a>
+
+        <a class="blog-row" href="https://www.justacademy.co/blog-detail/flutter-developer-roadmap-2026-skills-projects-career-path" target="_blank" rel="noopener">
+          <div class="b-left">
+            <span class="kicker">Flutter track</span>
+            <h3>Flutter developer roadmap 2026: skills, projects, career path</h3>
+          </div>
+          <span class="arrow">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Your track is one click away.</h2>
+        <p>Flutter, Android, iOS, or React Native — pick the one that matches where you want to work.</p>
+        <a class="btn-primary" href="#tracks">Explore all courses</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#top" class="logo"><span class="logo-mark">JA</span>JustAcademy</a>
+        <p>Mobile app development training out of Pune — Flutter, Android, iOS, and React Native — built around India's 2026 hiring market.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Courses</h4>
+        <a href="https://www.justacademy.co/course-detail/pune/flutter-training-in-pune" target="_blank" rel="noopener">Flutter training</a>
+        <a href="https://www.justacademy.co/course-detail/pune/android-app-development-in-pune" target="_blank" rel="noopener">Android development</a>
+        <a href="https://www.justacademy.co/course-detail/pune/ios-training-in-pune" target="_blank" rel="noopener">iOS training</a>
+        <a href="https://www.justacademy.co/course-detail/pune/react-native-training-in-pune" target="_blank" rel="noopener">React Native training</a>
+      </div>
+      <div class="foot-col">
+        <h4>Reading</h4>
+        <a href="https://www.justacademy.co/blog-detail/mobile-app-development-career-opportunities-in-india-2026" target="_blank" rel="noopener">Career opportunities 2026</a>
+        <a href="https://www.justacademy.co/blog-detail/ios-developer-roadmap-2026-learn-swift-xcode-app-development" target="_blank" rel="noopener">iOS roadmap 2026</a>
+        <a href="https://www.justacademy.co/blog-detail/flutter-developer-roadmap-2026-skills-projects-career-path" target="_blank" rel="noopener">Flutter roadmap 2026</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 JustAcademy, Pune. All rights reserved.</span>
+      <span class="tab-pill">
+        <a href="#tracks">Courses</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#reading">Blog</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight) * 100;
+    bar.style.width = scrolled + '%';
+  });
+</script>
+
+</body>
+</html>
